@@ -1,0 +1,21 @@
+.header {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-bottom: 1px solid #94a3b8;
+    transition: all 300ms ease;
+}
+
+.dark-header {
+    background: #1e293b;
+}
+
+.menu {
+    border-right: 1px solid #94a3b8;
+}
+
+.menu li, .logo {
+    transition: all 300ms ease;
+}
+
+.menu li:hover, .logo:hover {
+    color: #0ea5e9;
+}
