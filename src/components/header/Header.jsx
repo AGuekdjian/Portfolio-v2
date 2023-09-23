@@ -7,13 +7,13 @@ export default function Header() {
     const { state, dispatch } = useAppContext()
 
     const changeTheme = () => {
-        dispatch({ type: Global.actionType[0].TOGGLE_THEME })
+        dispatch({ type: Global.actionType.TOGGLE_THEME })
         localStorage.theme = JSON.stringify(!state.theme)
     }
 
     return (
         <header className={`duration-300 font-bold flex justify-around h-16 items-center header ${state.theme ? '' : 'dark-header'}`}>
-            <NavLink to='/' className={`logo mx-2 duration-300 ${state.theme ? "text-logo-light" : "text-logo-dark"}`}>Portfolio</NavLink>
+            <NavLink to='/' className={`logo mx-2 duration-300 text-4xl font-black ${state.theme ? "text-logo-light" : "text-logo-dark"}`}>A<span className={`${state.theme ? "text-teal-600" : "text-sky-600"}`}>G</span></NavLink>
             <nav className='flex'>
                 <ul className='flex mr-2 pr-2 menu'>
                     {Global.navbarInfo.map(({ url, name }, index) => {

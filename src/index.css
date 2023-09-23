@@ -14,6 +14,10 @@
     font-family: 'Nunito';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .dark {
     background: #0f172a;
     color: #94a3b8;
@@ -21,6 +25,7 @@
 
 main {
     min-height: 100vh;
+    background-image: url('./assets/images/bg-texture.png');
 }
 
 /* Estilos del Header y Footer */
@@ -42,12 +47,16 @@ main {
     border-right: 1px solid #94a3b8;
 }
 
-.text-nav-light:hover, .text-logo-light:hover {
+.text-nav-light:hover {
     color: rgb(13 148 136);
 }
 
-.text-nav-dark:hover, .text-logo-dark:hover {
+.text-nav-dark:hover {
     color: rgb(14, 165, 233);
+}
+
+.text-logo-light:hover, .text-logo-dark:hover {
+    transform: scale(1.1);
 }
 
 /* Estilos de Home */

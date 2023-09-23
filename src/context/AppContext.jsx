@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from 'react';
+import React, { createContext, useReducer } from 'react';
 import { Global } from '../helpers/Global'
 
 export const AppContext = createContext();
@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
 
     const reducer = (state, action) => {
         switch (action.type) {
-            case Global.actionType[0].TOGGLE_THEME:
+            case Global.actionType.TOGGLE_THEME:
                 return { ...state, theme: !state.theme }
             default:
                 return
