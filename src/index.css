@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,7 +47,7 @@ main {
 }
 
 .text-nav-dark:hover, .text-logo-dark:hover {
-    color: #0ea5e9;
+    color: rgb(14, 165, 233);
 }
 
 /* Estilos de Home */
@@ -57,4 +57,13 @@ main {
 
 .dwn-btn-dark:hover {
     background-color: rgb(14 165 233);
+}
+
+/* Estilos de About */
+.img-container-light {
+    background: linear-gradient(rgb(13 148 136), transparent);
+}
+
+.img-container-dark {
+    background: linear-gradient(rgb(14, 165, 233), transparent);
 }

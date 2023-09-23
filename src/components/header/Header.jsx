@@ -22,7 +22,7 @@ export default function Header() {
                         )
                     })}
                 </ul>
-                <button onClick={changeTheme} className='ml-2'>{state.theme ? <LuLightbulbOff /> : <LuLightbulb />}</button>
+                <button onClick={changeTheme} className='ml-2'>{state.theme ? <LuLightbulbOff className='text-2xl rotate-180' /> : <LuLightbulb className='text-2xl rotate-180' />}</button>
             </nav>
         </header>
     )
