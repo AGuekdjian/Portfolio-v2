@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Form from '../../components/form/Form'
 import { Global } from '../../helpers/Global';
+import {BiLogoGmail, BiLogoLinkedinSquare, BiLogoWhatsapp} from 'react-icons/bi'
 
 export default function Contact() {
     const { state } = useAppContext()
@@ -67,17 +68,19 @@ export default function Contact() {
 
     return (
         <main>
-            <h5></h5>
-            <h2></h2>
-            <section>
-                <ToastContainer />
-                <section>
-                    <div>LinkedIn</div>
-                    <div>Mail</div>
-                    <div>Whatsapp</div>
-                </section>
-                <section>
-                    <Form changed={changed} sendMessage={sendMessage} />
+            <section className='flex flex-col items-center mt-12'>
+                <h5>Ponte en contacto</h5>
+                <h2 className={`font-extrabold text-2xl ${state.theme ? "text-teal-600" : "text-sky-600"}`}>Contáctame</h2>
+                <section className='flex items-center'>
+                    <ToastContainer />
+                    <section>
+                        <BiLogoLinkedinSquare />
+                        <BiLogoGmail />
+                        <BiLogoWhatsapp />
+                    </section>
+                    <section className=''>
+                        <Form changed={changed} sendMessage={sendMessage} />
+                    </section>
                 </section>
             </section>
         </main>
