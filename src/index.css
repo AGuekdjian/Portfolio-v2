@@ -5,6 +5,10 @@
 
 
 /* Estilos Generales */
+:root {
+    color-scheme: light dark;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -18,61 +22,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.dark {
-    background: #0f172a;
-    color: #94a3b8;
-}
-
-main {
-    min-height: 100vh;
-    background-image: url('./assets/images/bg-texture.png');
-}
-
-/* Estilos del Header y Footer */
-.header {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    border-bottom: 1px solid #94a3b8;
-}
-
-.footer {
-    box-shadow: 0 -10px 15px -3px rgb(0 0 0 / 0.1), 0 -4px 6px -4px rgb(0 0 0 / 0.1);
-    border-top: 1px solid #94a3b8;
-}
-
-.dark-header, .dark-footer {
-    background: rgb(30, 41, 59);
-}
-
-.menu {
-    border-right: 1px solid #94a3b8;
-}
-
-.text-nav-light:hover {
-    color: rgb(13 148 136);
-}
-
-.text-nav-dark:hover {
-    color: rgb(14, 165, 233);
-}
-
-.text-logo-light:hover, .text-logo-dark:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos de Home */
-.dwn-btn-light:hover {
-    background-color: rgb(20 184 166);
-}
-
-.dwn-btn-dark:hover {
-    background-color: rgb(14 165 233);
-}
-
-/* Estilos de About */
-.img-container-light {
-    background: linear-gradient(rgb(13 148 136), transparent);
-}
-
-.img-container-dark {
-    background: linear-gradient(rgb(14, 165, 233), transparent);
+body {
+    background: #000;
+    color: #fff;
 }

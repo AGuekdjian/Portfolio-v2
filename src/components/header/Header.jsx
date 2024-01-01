@@ -1,28 +1,24 @@
-import { NavLink } from 'react-router-dom'
-import { useAppContext } from '../../hooks/useAppContext'
-import { Global } from '../../helpers/Global'
-import { LuLightbulbOff, LuLightbulb } from 'react-icons/lu'
+import React, { useState } from 'react'
 
-export default function Header() {
-    const { state, dispatch } = useAppContext()
-
-    const changeTheme = () => {
-        dispatch({ type: Global.actionType.TOGGLE_THEME })
-        localStorage.theme = JSON.stringify(!state.theme)
-    }
-
+export const Header = () => {
+    const [activeNav, setActiveNav] = useState('#')
     return (
-        <header className={`duration-300 font-bold flex justify-around h-16 items-center header ${state.theme ? '' : 'dark-header'}`}>
-            <NavLink to='/' className={`logo mx-2 duration-300 text-4xl font-black ${state.theme ? "text-logo-light" : "text-logo-dark"}`}>A<span className={`${state.theme ? "text-teal-600" : "text-sky-600"}`}>G</span></NavLink>
-            <nav className='flex'>
-                <ul className='flex mr-2 pr-2 menu'>
-                    {Global.navbarInfo.map(({ url, name }, index) => {
-                        return (
-                            <li key={index} className={`mx-2 duration-300 ${state.theme ? "text-nav-light" : "text-nav-dark"}`}><NavLink to={url}>{name}</NavLink></li>
-                        )
-                    })}
+        <header className='block bg-slate-200/10 backdrop-blur-[1px] rounded-full py-4 px-3 w-fit fixed top-8 flex'>
+            <nav>
+                <ul className='flex'>
+                    <li className={`transition text-center mx-3 w-16 ${activeNav === "#" ? 'rounded-xl bg-cyan-500/30' : null}`} >
+                        <a href='#' onClick={() => setActiveNav('#')}>Inicio</a>
+                    </li>
+                    <li className={`transition text-center mx-3 w-24 ${activeNav === "#Proyectos" ? 'rounded-xl bg-cyan-500/30' : null}`}>
+                        <a href='#Proyectos' onClick={() => setActiveNav('#Proyectos')}>Proyectos</a>
+                    </li>
+                    <li className={`transition text-center mx-3 w-24 ${activeNav === "#Experiencia" ? 'rounded-xl bg-cyan-500/30' : null}`}>
+                        <a href='#Experiencia' onClick={() => setActiveNav('#Experiencia')}>Experience</a>
+                    </li>
+                    <li className={`transition text-center mx-3 w-20 ${activeNav === "#Contacto" ? 'rounded-xl bg-cyan-500/30' : null}`}>
+                        <a href='#Contacto' onClick={() => setActiveNav('#Contacto')}>Contact</a>
+                    </li>
                 </ul>
-                <button onClick={changeTheme} className='ml-2'>{state.theme ? <LuLightbulbOff className='text-2xl rotate-180' /> : <LuLightbulb className='text-2xl rotate-180' />}</button>
             </nav>
         </header>
     )

@@ -1,18 +1,15 @@
-import Routing from "./routes/Routing"
-import { useAppContext } from './hooks/useAppContext'
-import Header from "./components/header/Header"
-import Footer from "./components/footer/Footer"
-import { Global } from "./helpers/Global"
+import { Header } from "./components/header/Header"
+import { Home } from "./components/home/Home"
 
 function App() {
-  const { state } = useAppContext()
   return (
     <>
-      <div className={`${state.theme ? '' : Global.themeType.DARK}`}>
-        <Header />
-        <Routing />
-        <Footer />
-      </div>
+      <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      {/* <Footer /> */}
     </>
   )
 }
