@@ -1,4 +1,5 @@
 import React from "react";
+import CV from "../../assets/resources/CV_Anthony_Guekdjian.pdf";
 
 export const Social = () => {
   const info = [
@@ -22,11 +23,6 @@ export const Social = () => {
       url: "https://wa.me/+598098452454",
       icon: "fa-brands fa-whatsapp",
     },
-    {
-      name: "Resume",
-      url: "",
-      icon: "fa-solid fa-briefcase",
-    },
   ];
   return (
     <section className="mt-3 ml-1">
@@ -44,6 +40,15 @@ export const Social = () => {
             </a>
           );
         })}
+        <a
+          className="mx-1.5 rounded-full border border-white/10 flex justify-center items-center gap-x-3 px-4 bg-white/5 hover:scale-110 hover:bg-white/10 hover:cursor-pointer transition"
+          download
+          href={CV}
+          target="_blank"
+        >
+          <i className={`fa-solid fa-briefcase text-2xl`}></i>
+          <span className="text-sm">Resume</span>
+        </a>
       </nav>
     </section>
   );

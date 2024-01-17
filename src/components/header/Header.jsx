@@ -17,20 +17,20 @@ export const Header = () => {
           </li>
           <li
             className={`transition text-center mx-3 w-24 ${
-              activeNav === "#Proyectos" ? "rounded-xl bg-cyan-700" : null
-            }`}
-          >
-            <a href="#Proyectos" onClick={() => setActiveNav("#Proyectos")}>
-              Proyectos
-            </a>
-          </li>
-          <li
-            className={`transition text-center mx-3 w-24 ${
               activeNav === "#Experiencia" ? "rounded-xl bg-cyan-700" : null
             }`}
           >
             <a href="#Experiencia" onClick={() => setActiveNav("#Experiencia")}>
               Experience
+            </a>
+          </li>
+          <li
+            className={`transition text-center mx-3 w-24 ${
+              activeNav === "#Proyectos" ? "rounded-xl bg-cyan-700" : null
+            }`}
+          >
+            <a href="#Proyectos" onClick={() => setActiveNav("#Proyectos")}>
+              Proyectos
             </a>
           </li>
           <li
