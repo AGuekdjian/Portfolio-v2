@@ -2,7 +2,7 @@ import React from "react";
 
 export const Experience = () => {
   return (
-    <section className="my-28" id="Experiencia">
+    <section className="my-28 px-6 lg:px-0" id="Experiencia">
       <h2 className="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
         <i className="fa-solid fa-briefcase text-base"></i>
         Experiencia Laboral

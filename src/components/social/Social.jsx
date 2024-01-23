@@ -25,8 +25,8 @@ export const Social = () => {
     },
   ];
   return (
-    <section className="mt-3 ml-1">
-      <nav className="flex">
+    <section className="mt-3 ml-1 flex w-full">
+      <nav className="flex flex-wrap gap-y-2 justify-center">
         {info.map((social, index) => {
           return (
             <a
