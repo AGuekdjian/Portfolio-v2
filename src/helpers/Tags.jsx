@@ -28,8 +28,8 @@ export const Tags = {
       >
         <defs>
           <linearGradient x1="-2.778%" y1="32%" x2="100%" y2="67.556%" id="a">
-            <stop stop-color="#2298BD" offset="0%" />
-            <stop stop-color="#0ED7B5" offset="100%" />
+            <stop stopColor="#2298BD" offset="0%" />
+            <stop stopColor="#0ED7B5" offset="100%" />
           </linearGradient>
         </defs>
         <path
