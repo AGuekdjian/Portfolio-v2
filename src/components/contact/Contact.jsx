@@ -13,10 +13,7 @@ export default function Contact() {
   };
 
   return (
-    <section
-      className="min-h-screen text-white py-28 px-6 lg:px-0"
-      id="Contacto"
-    >
+    <section id="Contacto" className="px-8 h-screen sm:pt-28 mt-40">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="text-3xl font-bold mb-12 flex gap-x-3 items-center"

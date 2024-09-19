@@ -1,7 +1,8 @@
 import Contact from "./components/contact/Contact";
-import { Experience } from "./components/experience/Experience";
+import AcademicFormation from "./components/education/AcademicFormation";
+import Experience from "./components/experience/Experience";
 import { Header } from "./components/header/Header";
-import { Home } from "./components/home/Home";
+import Home from "./components/home/Home";
 import { ProjectsAndAchievements } from "./components/projectsAndAchievements/ProjectsAndAchievements";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Home />
         <Experience />
         <ProjectsAndAchievements />
+        <AcademicFormation />
         <Contact />
       </main>
       {/* <Footer /> */}

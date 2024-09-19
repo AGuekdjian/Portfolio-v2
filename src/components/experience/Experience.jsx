@@ -1,75 +1,83 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { BriefcaseIcon, ChevronRightIcon } from "lucide-react";
 
-export const Experience = () => {
+const experiences = [
+  {
+    date: "Ago 2024 - In progress",
+    title: "Aplicación de Gestión Integral.",
+    description:
+      "Me encuentro desarrollando una aplicación de gestión que ofrece soluciones para la administración de clientes, inventario, empleados y órdenes de servicio. El backend está diseñado con una arquitectura basada en  microservicios, utilizando NestJS, mientras que el frontend está contruido con React. La aplicación se ejecuta en contenedores Docker en AWS EC2, con MongoDB y PostgreSQL como bases de datos. La integración y entrega continua se manejan con GitHub Actions para optimizar el flujo de trabajo.",
+    link: "#",
+  },
+  {
+    date: "Oct 2023 - Dic 2023",
+    title: "Tech Lead Infrastructure & Front-end Developer",
+    description:
+      "Proyecto integrador de la carrera de Desarrollo de Software de UTEC, en este proyecto estuve encargado de realizar la infraestructura en AWS y forme parte del desarrollo frontend con React, realizando la autenticación, autorización, enrutado, entre otras funcionalidades.",
+    link: "#",
+  },
+  {
+    date: "Ago 2022 - Jul 2023",
+    title: "Frontend Developer Freelance en AmChamAr",
+    description:
+      "Desarrollé varias aplicaciones web, utilizando tecnologías como React, CSS, entre otras. Logrando muy buen SEO y rendimiento.",
+  },
+  {
+    date: "May 2024",
+    title: "Backend de E-commerce con NestJS (Proyecto personal)",
+    description:
+      "Desarrollé un backend de e-commerce utilizando NestJS, implementando una arquitectura basada en microservicios y orquestando la aplicación con Docker.",
+  },
+];
+
+export default function Experience() {
   return (
-    <section className="my-28 px-6 lg:px-0" id="Experiencia">
-      <h2 className="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
-        <i className="fa-solid fa-briefcase text-base"></i>
-        Experiencia Laboral
-      </h2>
-      <ol className="relative border-s border-gray-200 dark:border-gray-700">
-        <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            February 2022
-          </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Application UI code in Tailwind CSS
-          </h3>
-          <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Get access to over 20+ pages including a dashboard layout, charts,
-            kanban board, calendar, and pre-order E-commerce & Marketing pages.
-          </p>
-          <a
-            href="#"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-          >
-            Learn more{" "}
-            <svg
-              className="w-3 h-3 ms-2 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
+    <section
+      id="Experiencia"
+      className="px-8 min-h-screen sm:relative sm:top-36 pt-28"
+    >
+      <div className="max-w-xl mx-auto lg:max-w-4xl xl:max-w-6xl">
+        <motion.h2
+          className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 flex gap-x-3 items-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <BriefcaseIcon className="w-6 h-6 sm:w-8 sm:h-8" />
+          Experiencia Laboral
+        </motion.h2>
+        <ol className="relative border-s border-neutral-700 space-y-8 sm:space-y-12">
+          {experiences.map((experience, index) => (
+            <motion.li
+              key={index}
+              className="ms-4 sm:ms-6"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </a>
-        </li>
-        <li className="mb-10 ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            March 2022
-          </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Marketing UI design in Figma
-          </h3>
-          <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-            All of the pages and components are first designed in Figma and we
-            keep a parity between the two versions even as we update the
-            project.
-          </p>
-        </li>
-        <li className="ms-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            April 2022
-          </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            E-Commerce UI code in Tailwind CSS
-          </h3>
-          <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-            Get started with dozens of web components and interactive elements
-            built on top of Tailwind CSS.
-          </p>
-        </li>
-      </ol>
+              <div className="absolute w-3 h-3 bg-cyan-500 rounded-full mt-1.5 -start-1.5 border border-neutral-900"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-400">
+                {experience.date}
+              </time>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mt-2 mb-2 sm:mb-3">
+                {experience.title}
+              </h3>
+              <p className="mb-4 text-sm sm:text-base font-normal text-gray-400">
+                {experience.description}
+              </p>
+              {/* {experience.link && (
+                <a
+                  href={experience.link}
+                  className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-sm font-medium text-cyan-500 bg-neutral-800 border border-neutral-700 rounded-lg hover:bg-neutral-700 hover:text-cyan-400 focus:z-10 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition duration-300"
+                >
+                  Saber más
+                  <ChevronRightIcon className="w-4 h-4 ms-2" />
+                </a>
+              )} */}
+            </motion.li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
-};
+}
