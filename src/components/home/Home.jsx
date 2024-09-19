@@ -65,8 +65,8 @@ export default function Home() {
           solucionar diversos problemas, siempre buscando optimizar y mejorar
           procesos. Actualmente, estoy ampliando mis habilidades al aprender
           sobre DevOps Engineer y Cloud Computing. Con una mentalidad inquieta y
-          curiosa, estoy constantemente aprendiendo y actualizándome en las
-          últimas tendencias del sector.
+          curiosa, constantemente aprendiendo y actualizándome en las últimas
+          tendencias del sector.
           <br />
           <br />
           Estoy abierto a nuevas oportunidades laborales.
