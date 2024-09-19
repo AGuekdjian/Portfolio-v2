@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # Especifica el ecosistema, en este caso npm para Node.js
-    directory: "../" # Directorio donde se encuentra el archivo package.json, generalmente en la raíz
+    directory: "/" # Directorio donde se encuentra el archivo package.json, generalmente en la raíz
     schedule:
       interval: "daily" # Frecuencia de actualización: daily (diario), weekly (semanal), monthly (mensual)
     commit-message:
