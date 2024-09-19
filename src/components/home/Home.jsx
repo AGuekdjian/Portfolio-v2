@@ -87,7 +87,8 @@ export default function Home() {
             Descargar CV
           </a>
           <a
-            href="#contact"
+            href="mailto:anthonyguekdjian@gmail.com"
+            target="_blank"
             className="flex items-center px-4 py-2 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors duration-300"
           >
             <Mail className="w-5 h-5 mr-2" />
@@ -102,7 +103,7 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/AGuekdjian"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -124,7 +125,7 @@ export default function Home() {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/aguekdjian/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -132,7 +133,8 @@ export default function Home() {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:anthonyguekdjian@gmail.com"
+            target="_blank"
             className="text-gray-400 hover:text-white transition-colors duration-300"
           >
             <Mail className="w-6 h-6" />
