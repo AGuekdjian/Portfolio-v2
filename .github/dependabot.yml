@@ -1,19 +1,10 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: "npm" # npm para manejar dependencias de Node.js
+    directory: "/" # La raíz del repositorio, donde se encuentra package.json
     schedule:
-      interval: "daily"
+      interval: "daily" # Frecuencia de actualización diaria
     commit-message:
-      prefix: "deps"
-    open-pull-requests-limit: 10
-    pull-request-branch-name: "dependabot-auto-merge"
-    # Configuración de auto-merge
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
-    automerged_updates:
-      - match:
-          update_type: "semver-minor"
-      - match:
-          update_type: "semver-patch"
+      prefix: "deps" # Prefijo de los mensajes de commit
+    open-pull-requests-limit: 10 # Límite de PRs abiertos al mismo tiempo por Dependabot
+
