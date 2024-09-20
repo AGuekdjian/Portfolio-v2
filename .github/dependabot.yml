@@ -6,5 +6,5 @@ updates:
       interval: "daily" # Frecuencia de actualización diaria
     commit-message:
       prefix: "deps" # Prefijo de los mensajes de commit
-    open-pull-requests-limit: 15 # Límite de PRs abiertos al mismo tiempo por Dependabot
+    open-pull-requests-limit: 10 # Límite de PRs abiertos al mismo tiempo por Dependabot
 
