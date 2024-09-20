@@ -21,8 +21,8 @@ jobs:
           fi
 
       - name: Auto-merge PR
-        uses: peter-evans/enable-pull-request-automerge@v3.0.0
-        with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          pull-request-number: ${{ github.event.pull_request.number }}
-          merge-method: squash
+        env:
+          GH_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}  # Asegúrate de que este secreto esté configurado correctamente
+        run: |
+          gh pr merge -R "AGuekdjian/Portfolio-v2" --squash --auto "${{ github.event.pull_request.number }}"
+
