@@ -1,10 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # npm para manejar dependencias de Node.js
-    directory: "/" # La raíz del repositorio, donde se encuentra package.json
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: "daily" # Frecuencia de actualización diaria
+      interval: "weekly"
+    open-pull-requests-limit: 10
     commit-message:
-      prefix: "deps" # Prefijo de los mensajes de commit
-    open-pull-requests-limit: 15 # Límite de PRs abiertos al mismo tiempo por Dependabot
-
+      prefix: "deps"
+    rebase-strategy: "auto"
+    labels:
+      - "dependencies"
+    reviewers:
+      - "AGuekdjian"

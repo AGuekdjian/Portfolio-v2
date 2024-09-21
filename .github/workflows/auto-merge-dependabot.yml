@@ -1,0 +1,24 @@
+name: "Auto-merge Dependabot updates"
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    branches:
+      - main
+
+jobs:
+  automerge:
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4.1.7
+
+      - name: "Merge Dependabot PRs"
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --auto --squash
+        env:
+          REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
